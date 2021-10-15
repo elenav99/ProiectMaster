@@ -1,0 +1,32 @@
+﻿@model IEnumerable<ProductVM>
+
+@{ ViewData["Title"] = "Basket"; }
+
+<table id="table" class="table table-hover table-striped table-dark">
+<thead>
+    <tr>
+        <th hidden>Course Id</th>
+        <th></th>
+        <th>Course name</th>
+        <th>Price</th>
+        <th>Is available</th>
+        <th>Description</th>
+    </tr>
+</thead>
+
+<tbody>
+
+    @foreach (var item in Model)
+    {
+<tr id="@item.Id">
+    <td hidden>@item.Id</td>
+    <td><img style="width: 300px; height: 150px;" src="~/@item.ImagePath" alt="nu exista imagine momentan" /></td>
+    <td>@item.Name</td>
+    <td>@item.Price</td>
+    <td><input type="checkbox" checked="@item.IsAvailable" /></td>
+    <td>@item.Description</td>
+</tr>}
+
+</tbody>
+
+     </table>

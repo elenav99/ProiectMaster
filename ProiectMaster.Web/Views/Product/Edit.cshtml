@@ -1,0 +1,9 @@
+﻿@model ProductVM
+
+@{
+    ViewData["Title"] = "Edit a course";
+}
+
+@{ ViewBag.IsNew = false;}
+
+@await Html.PartialAsync(@"../Shared/Components/_Product.cshtml")
